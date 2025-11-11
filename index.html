@@ -355,7 +355,6 @@
             transition: filter 0.3s;
         }
 
-        /* NO FILTER for DEX logo */
         .corner-icon-img.no-filter {
             filter: none !important;
             width: 50px !important;
@@ -366,7 +365,6 @@
             filter: brightness(0) saturate(100%) invert(88%) sepia(85%) saturate(1636%) hue-rotate(23deg) brightness(104%) contrast(104%);
         }
 
-        /* Keep DEX logo unchanged on hover */
         .corner-link-box:hover .corner-icon-img.no-filter {
             filter: none !important;
         }
@@ -398,7 +396,6 @@
             transform: translateX(0);
         }
 
-        /* Buy Now Button Special Style */
         .corner-link-box.buy-now {
             background: linear-gradient(135deg, #FFD700, #FFED4E);
             border-color: #000;
@@ -419,7 +416,6 @@
             filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px 100px 20px;
@@ -445,7 +441,6 @@
             text-shadow: 0 0 10px rgba(173, 255, 47, 0.5);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -556,7 +551,6 @@
             }
         }
 
-        /* Prevent text selection */
         body {
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -566,10 +560,8 @@
     </style>
 </head>
 <body>
-    <!-- Lemon Background -->
     <div class="lemon-background" id="lemonBackground"></div>
 
-    <!-- Bottom Corner Links -->
     <div class="corner-links">
         <div class="corner-link-item">
             <span class="corner-label">Buy Now</span>
@@ -600,7 +592,6 @@
         </div>
     </div>
 
-    <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox-content">
             <button class="lightbox-close" id="lightboxClose">×</button>
@@ -612,150 +603,82 @@
     </div>
 
     <div class="container">
-        <!-- Header -->
         <header>
             <a href="https://lemonjak.fun" class="back-link">← Back to Home</a>
             <h1 class="title">GALLERY</h1>
             <p class="subtitle">Lemonjak's Finest Moments 🍋</p>
         </header>
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid" id="galleryGrid">
-            <!-- Gallery items will be populated by JavaScript -->
-        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
 
-        <!-- Footer -->
         <footer>
             <p>©2025 Lemonjak | <a href="https://lemonjak.fun">lemonjak.fun</a></p>
         </footer>
     </div>
 
     <script>
-        // Gallery images - YOUR REAL IMAGES
+        // Gallery images - ALL 58 NEW IMGUR IMAGES!
         const galleryImages = [
-            {
-                src: 'https://pbs.twimg.com/media/GqnRGU0XIAA8tkW?format=jpg&name=medium',
-                title: 'Lemonjak #1'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GqluTDXW0AIdDf1?format=png&name=small',
-                title: 'Lemonjak #2'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GqrUAPPXEAAxO0g?format=jpg&name=900x900',
-                title: 'Lemonjak #3'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/Gqrh9ehXMAEZuAl?format=jpg&name=small',
-                title: 'Lemonjak #4'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GqsSMV3XAAAaAPX?format=png&name=small',
-                title: 'Lemonjak #5'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GqteRjsWwAA7Fuw?format=png&name=small',
-                title: 'Lemonjak #6'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GrMK8ZeWUAA5fs5?format=jpg&name=large',
-                title: 'Lemonjak #7'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GrdiwQDbAAAPwDn?format=jpg&name=small',
-                title: 'Lemonjak #8'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GtvIYQjWwAA59FR?format=jpg&name=large',
-                title: 'Lemonjak #9'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/Gxi0AYJWkAA94bU?format=jpg&name=small',
-                title: 'Lemonjak #10'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GxuoBElawAI0Sr1?format=jpg&name=large',
-                title: 'Lemonjak #11'
-            },
-            {
-                src: 'https://cdn.cdnstep.com/r4ugtutoohv9SG0yH6v0/12.webp',
-                title: 'Lemonjak #12'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GqZZGUzWEAI_t-4?format=jpg&name=900x900',
-                title: 'Lemonjak #13'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/Gqn3dURWYAAHTiB?format=jpg&name=360x360',
-                title: 'Lemonjak #14'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/Gqb66OxXUAAaynC?format=jpg&name=medium',
-                title: 'Lemonjak #15'
-            },
-            {
-                src: 'https://pbs.twimg.com/media/GqUtT36XoAAOwYT?format=jpg&name=large',
-                title: 'Lemonjak #16'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1415515952514203699/1436967893253226606/8b13261e-9168-4c42-83f5-1e12d24c1ce3.png?ex=69118823&is=691036a3&hm=1ab351ae6efe04261a7b0d6f54ed8fc53ebf545ec648d34eec41ff567da24b48&=&format=webp&quality=lossless&width=1280&height=1280',
-                title: 'Lemonjak #17'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436994834584830002/Screenshot_2025-11-09_at_08.24.22.png?ex=6911a13a&is=69104fba&hm=410f9fbd05261ba0c7197967f25428626bb61c0f8734462fe03c6d7d732b2f39&=&format=webp&quality=lossless&width=1764&height=1772',
-                title: 'Lemonjak #18'
-            },
-            {
-                src: 'https://cdn.cdnstep.com/r4ugtutoohv9SG0yH6v0/11.webp',
-                title: 'Lemonjak #19'
-            },
-            {
-                src: 'https://cdn.cdnstep.com/r4ugtutoohv9SG0yH6v0/7.webp',
-                title: 'Lemonjak #20'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436996636550365184/Screenshot_2025-11-09_at_08.31.32.png?ex=6911a2e8&is=69105168&hm=6f437060aec0570c9bdde5e33e4831ae38de52220fdc6c68d621d72264c710f9&=&format=webp&quality=lossless&width=1780&height=1772',
-                title: 'Lemonjak #21'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436996840972222586/Screenshot_2025-11-09_at_08.32.07.png?ex=6911a318&is=69105198&hm=13f12ab01e6beba0f69f7946e59adb82e46f21fea44965d9b1b9f18dbf2684e8&=&format=webp&quality=lossless&width=1560&height=1564',
-                title: 'Lemonjak #22'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436996841425076384/Screenshot_2025-11-09_at_08.32.16.png?ex=6911a319&is=69105199&hm=00cede24e2a4061e0638b7495c4c3db5c89560152e5bf982ef85f88d23ecbe29&=&format=webp&quality=lossless&width=1564&height=1564',
-                title: 'Lemonjak #23'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436996841769275502/Screenshot_2025-11-09_at_08.32.21.png?ex=6911a319&is=69105199&hm=de4a5592d6e5ecba608f9a1270b6d5919e14a7955b442a47e50d9c0a4256c458&=&format=webp&quality=lossless&width=1568&height=1564',
-                title: 'Lemonjak #24'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436996888996876359/Screenshot_2025-11-09_at_08.32.32.png?ex=6911a324&is=691051a4&hm=14d48f3074af5c3fb0edf101c0666a4e458586bda409d350e83891e10d567257&=&format=webp&quality=lossless&width=698&height=700',
-                title: 'Lemonjak #25'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436997365771927644/Screenshot_2025-11-09_at_08.34.15.png?ex=6911a396&is=69105216&hm=c391a01258aee3548f977e9686795dc24458cbda399e0f0ab6ade1d65337e32d&=&format=webp&quality=lossless&width=1560&height=1564',
-                title: 'Lemonjak #26'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436997366065533068/Screenshot_2025-11-09_at_08.34.21.png?ex=6911a396&is=69105216&hm=a2b14d097b39ee8dc23f1d75e0b542764ed740697d01e164d15f077b220d35d7&=&format=webp&quality=lossless&width=1580&height=1564',
-                title: 'Lemonjak #27'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436997366350876754/Screenshot_2025-11-09_at_08.34.26.png?ex=6911a396&is=69105216&hm=1376cd96687e965c6276759141d827c38f660b4b61d04596508e5929319198f3&=&format=webp&quality=lossless&width=1580&height=1564',
-                title: 'Lemonjak #28'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436997453952843858/Screenshot_2025-11-09_at_08.34.40.png?ex=6911a3ab&is=6910522b&hm=e3cc56cd23bdb8bf6b2b3e4313200d96a125ec9f0195408c4bd8ffaff7357b44&=&format=webp&quality=lossless&width=1570&height=1564',
-                title: 'Lemonjak #29'
-            },
-            {
-                src: 'https://media.discordapp.net/attachments/1349946231643967600/1436997454263488583/Screenshot_2025-11-09_at_08.34.47.png?ex=6911a3ab&is=6910522b&hm=435e310e88d8cacb2c108282d234e4ae0a1692dd5438626b6a50d2d9dc3f7826&=&format=webp&quality=lossless&width=1766&height=1564',
-                title: 'Lemonjak #30'
-            }
+            { src: 'https://i.imgur.com/JdUbwdz.png', title: 'Lemonjak #1' },
+            { src: 'https://i.imgur.com/OTuWbXj.png', title: 'Lemonjak #2' },
+            { src: 'https://i.imgur.com/6gOvnxa.png', title: 'Lemonjak #3' },
+            { src: 'https://i.imgur.com/VjfBj81.png', title: 'Lemonjak #4' },
+            { src: 'https://i.imgur.com/28XkleE.png', title: 'Lemonjak #5' },
+            { src: 'https://i.imgur.com/MLmRABw.png', title: 'Lemonjak #6' },
+            { src: 'https://i.imgur.com/q7QAFNj.png', title: 'Lemonjak #7' },
+            { src: 'https://i.imgur.com/is1DF1B.png', title: 'Lemonjak #8' },
+            { src: 'https://i.imgur.com/o0ZtVq2.png', title: 'Lemonjak #9' },
+            { src: 'https://i.imgur.com/CX2kSGP.png', title: 'Lemonjak #10' },
+            { src: 'https://i.imgur.com/Mn8ucjL.png', title: 'Lemonjak #11' },
+            { src: 'https://i.imgur.com/HDSrZv3.png', title: 'Lemonjak #12' },
+            { src: 'https://i.imgur.com/lAanK1e.png', title: 'Lemonjak #13' },
+            { src: 'https://i.imgur.com/rdD4pS9.png', title: 'Lemonjak #14' },
+            { src: 'https://i.imgur.com/5h51lw1.png', title: 'Lemonjak #15' },
+            { src: 'https://i.imgur.com/ljlnC3e.png', title: 'Lemonjak #16' },
+            { src: 'https://i.imgur.com/X6rAqbA.png', title: 'Lemonjak #17' },
+            { src: 'https://i.imgur.com/GUKx4mB.png', title: 'Lemonjak #18' },
+            { src: 'https://i.imgur.com/BFm7vQK.png', title: 'Lemonjak #19' },
+            { src: 'https://i.imgur.com/nvTrLr8.png', title: 'Lemonjak #20' },
+            { src: 'https://i.imgur.com/FdWAhiy.png', title: 'Lemonjak #21' },
+            { src: 'https://i.imgur.com/8pq1oBg.png', title: 'Lemonjak #22' },
+            { src: 'https://i.imgur.com/pehM3yf.png', title: 'Lemonjak #23' },
+            { src: 'https://i.imgur.com/ddcfjVT.png', title: 'Lemonjak #24' },
+            { src: 'https://i.imgur.com/rPHgUMu.png', title: 'Lemonjak #25' },
+            { src: 'https://i.imgur.com/27WRrRH.png', title: 'Lemonjak #26' },
+            { src: 'https://i.imgur.com/UTB4ZOo.png', title: 'Lemonjak #27' },
+            { src: 'https://i.imgur.com/rcILB4T.png', title: 'Lemonjak #28' },
+            { src: 'https://i.imgur.com/MSaRbID.png', title: 'Lemonjak #29' },
+            { src: 'https://i.imgur.com/koXbVlM.png', title: 'Lemonjak #30' },
+            { src: 'https://i.imgur.com/XMVmjOc.png', title: 'Lemonjak #31' },
+            { src: 'https://i.imgur.com/peyibVe.jpeg', title: 'Lemonjak #32' },
+            { src: 'https://i.imgur.com/CQwEHMl.png', title: 'Lemonjak #33' },
+            { src: 'https://i.imgur.com/IzUFpPy.png', title: 'Lemonjak #34' },
+            { src: 'https://i.imgur.com/cSjhx5i.png', title: 'Lemonjak #35' },
+            { src: 'https://i.imgur.com/6s032Te.png', title: 'Lemonjak #36' },
+            { src: 'https://i.imgur.com/TSJtJyC.png', title: 'Lemonjak #37' },
+            { src: 'https://i.imgur.com/2eYHTn5.png', title: 'Lemonjak #38' },
+            { src: 'https://i.imgur.com/SersnXP.png', title: 'Lemonjak #39' },
+            { src: 'https://i.imgur.com/3zAHo4I.png', title: 'Lemonjak #40' },
+            { src: 'https://i.imgur.com/fMi3KKe.png', title: 'Lemonjak #41' },
+            { src: 'https://i.imgur.com/THsSbgT.jpeg', title: 'Lemonjak #42' },
+            { src: 'https://i.imgur.com/GvlGdz0.png', title: 'Lemonjak #43' },
+            { src: 'https://i.imgur.com/EBgi0o2.png', title: 'Lemonjak #44' },
+            { src: 'https://i.imgur.com/D2ozoVR.png', title: 'Lemonjak #45' },
+            { src: 'https://i.imgur.com/ehB4HqV.png', title: 'Lemonjak #46' },
+            { src: 'https://i.imgur.com/vcjcOZA.png', title: 'Lemonjak #47' },
+            { src: 'https://i.imgur.com/4efoUZ9.png', title: 'Lemonjak #48' },
+            { src: 'https://i.imgur.com/L99rphs.png', title: 'Lemonjak #49' },
+            { src: 'https://i.imgur.com/2lz92cB.png', title: 'Lemonjak #50' },
+            { src: 'https://i.imgur.com/ST6Vx59.png', title: 'Lemonjak #51' },
+            { src: 'https://i.imgur.com/ulgRtP2.png', title: 'Lemonjak #52' },
+            { src: 'https://i.imgur.com/25mJQB0.png', title: 'Lemonjak #53' },
+            { src: 'https://i.imgur.com/0KyUSok.png', title: 'Lemonjak #54' },
+            { src: 'https://i.imgur.com/vhEvQU3.png', title: 'Lemonjak #55' },
+            { src: 'https://i.imgur.com/hAj7gZl.png', title: 'Lemonjak #56' },
+            { src: 'https://i.imgur.com/PgITSRb.png', title: 'Lemonjak #57' },
+            { src: 'https://i.imgur.com/CkmWvtj.png', title: 'Lemonjak #58' }
         ];
 
-        // Lemon Background Physics
         const lemonBackground = document.getElementById('lemonBackground');
 
         class Lemon {
@@ -912,7 +835,6 @@
             animationId = requestAnimationFrame(animate);
         }
 
-        // Populate Gallery
         const galleryGrid = document.getElementById('galleryGrid');
         
         galleryImages.forEach((image, index) => {
@@ -928,7 +850,6 @@
             galleryGrid.appendChild(item);
         });
 
-        // Lightbox functionality
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
         const lightboxCaption = document.getElementById('lightboxCaption');
@@ -975,7 +896,6 @@
             }
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
             
@@ -984,10 +904,8 @@
             if (e.key === 'ArrowRight') showNextImage();
         });
 
-        // Initialize
         createLemons();
 
-        // Handle resize
         let resizeTimer;
         window.addEventListener('resize', function() {
             clearTimeout(resizeTimer);
@@ -996,7 +914,6 @@
             }, 250);
         });
 
-        // Update lemon positions on scroll
         let scrollTimer;
         window.addEventListener('scroll', function() {
             clearTimeout(scrollTimer);
